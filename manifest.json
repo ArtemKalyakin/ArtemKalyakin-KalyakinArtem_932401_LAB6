@@ -1,0 +1,20 @@
+{
+    "name": "Калькулятор — Калякин Артём",
+    "short_name": "Калькулятор",
+    "description": "Калькулятор на Express с офлайн-режимом",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#f4ede2",
+    "theme_color": "#c9a87c",
+    "lang": "ru",
+    "icons": [
+        {
+            "src": "/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

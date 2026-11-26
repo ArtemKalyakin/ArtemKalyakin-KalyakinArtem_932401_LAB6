@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор — Калякин Артём</title>
+    <meta name="description" content="Калькулятор с серверным API на Express и офлайн-режимом">
+    <meta name="theme-color" content="#f4ede2">
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/icon.svg">
+    <link rel="apple-touch-icon" href="/icon.svg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        textarea { resize: vertical; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Калькулятор</h1>
+        <p>Калякин Артём, группа 932401</p>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+            <ul>
+                <li><a href="/">Калькулятор</a></li>
+                <li><a href="/about">О себе</a></li>
+                <li><a href="/api/status" target="_blank" rel="noopener">/api/status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calc" class="calc-card">
+            <h2>Посчитать</h2>
+            <form id="calc-form">
+                <label for="a">Первое число (a)</label>
+                <input id="a" name="a" type="text" inputmode="decimal" value="5" required>
+
+                <fieldset class="ops">
+                    <legend>Операция</legend>
+                    <label><input type="radio" name="op" value="+" checked> +</label>
+                    <label><input type="radio" name="op" value="-"> −</label>
+                    <label><input type="radio" name="op" value="*"> ×</label>
+                    <label><input type="radio" name="op" value="/"> ÷</label>
+                </fieldset>
+
+                <label for="b">Второе число (b)</label>
+                <input id="b" name="b" type="text" inputmode="decimal" value="10" required>
+
+                <button type="submit" style="text-transform: uppercase;">Посчитать</button>
+            </form>
+
+            <div class="output" aria-live="polite">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">—</div>
+                <div class="error" id="error"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Выполнил студент ТГУ</p>
+        <p>Калякин Артём</p>
+        <p>2026</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
